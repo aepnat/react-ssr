@@ -4,6 +4,9 @@ export default (state = null, action) => {
   switch(action.type){
     case FETCH_CURRENT_USER:
       return action.payload.data || false
-    break;
+    break
+    default:
+      return state
+    break
   }
 }
