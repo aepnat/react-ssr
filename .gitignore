@@ -1,0 +1,7 @@
+/server/node_modules
+/server/package-lock.json
+
+/server/config.js
+
+/server/build/bundle.js
+/server/public/bundle.js
