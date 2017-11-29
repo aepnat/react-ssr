@@ -7,8 +7,8 @@ import config from '../../config'
 export default (req) => {
   const axiosInstance = axios.create({
     baseURL: config.api_url,
-    headers: { cookie: req.get('cookie') | '' }
-  })
+    headers: { cookie: req.get('cookie') || '' }
+  });
   
   const store = createStore(reducers, {}, applyMiddleware(thunk.withExtraArgument(axiosInstance)))
   
