@@ -2,10 +2,20 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchAdmins } from '../actions'
 import requireAuth from '../components/hocs/requireAuth'
+import { Helmet } from 'react-helmet'
 
 class AdminListPage extends Component{
   componentDidMount(){
     this.props.fetchAdmins()
+  }
+
+  head(){
+    return(
+      <Helmet>
+      <title>Admin List</title>
+      <meta property="og:title" content="Admin List" />
+      </Helmet>
+    )
   }
 
   renderAdmin(){
