@@ -10,16 +10,18 @@ const Header = ({ auth }) => {
   )
 
   return (
-    <nav>
-      <div className="nav-wrapper blue-grey darken-4">
-        <Link to="/" className="brand-logo center">React SSR</Link>
-        <ul className="right">
-          <li><Link to="/users">Users</Link></li>
-          <li><Link to="/admins">Admins</Link></li>
-          <li>{authButton}</li>
-        </ul>
-      </div>
-    </nav>
+    <header>
+      <nav>
+        <div className="nav-wrapper grey darken-2">
+          <Link to="/" className="brand-logo center">React SSR</Link>
+          <ul className="right">
+            <li><Link to="/users">Users</Link></li>
+            <li><Link to="/admins">Admins</Link></li>
+            <li>{authButton}</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
   )
 }
 

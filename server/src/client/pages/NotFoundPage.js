@@ -13,9 +13,10 @@ const head = () => {
 const NotFoundPage = ({ staticContext = {} }) => {
   staticContext.notFound = true
   return (
-    <div>
+    <div className="center-align" style={{ marginTop: '200px' }}>
       {head()}
-      <h1>Oops, route not found.</h1>
+      <h3>404 Not Found</h3>
+      <p>Page you are looking for is unknown.</p>
     </div>
   )
 }
